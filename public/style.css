@@ -1,0 +1,15 @@
+:root{
+    --climate-green:#2FA36A;   /* buttons/accents */
+    --life-green:#46C47C;      /* hovers and subtle UI */
+    --energy-yellow:#FFC400;   /* callouts */
+    --ocean-blue:#0B5C9C;      /* links/active */
+    --charcoal:#2E3338;        /* text on light */
+    --paper:#F7FAF8;           /* page bg */
+    --card:#FFFFFF;            /* cards/nav */
+    --border:#E1E8E4;          /* dividers */
+    --focus:#0B5C9C;
+}
+
+h1{
+    font-weight:800px;
+}
