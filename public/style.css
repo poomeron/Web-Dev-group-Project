@@ -10,6 +10,75 @@
     --focus:#0B5C9C;
 }
 
-h1{
-    font-weight:800px;
+body{
+    background-color: var(--paper);
+    line-height :16px;
+
 }
+
+h1{
+    font-size: 50px;
+}
+#form_title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search{
+    margin-left: auto;
+    display: flex;
+    gap: 0.5rem;
+}
+.search input{
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    min-width: 200px;
+    background: #fff;
+    color: #111;
+
+}
+.search button{
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--border);
+    background: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.search input, .search button{
+    outline: 1px solid color-mix(in oklab, var(--focus) 35%, white);
+    outline-offset: 0px;
+
+}
+
+.main-nav{
+    padding: 5px 20px;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    
+
+
+}
+.nav-bar{
+    display: grid; 
+    grid-auto-flow: column;
+    gap: 12px;
+    list-style: none;
+    
+}
+.nav-link{
+    padding: .6rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+    color: var(--ocean-blue);
+    font-weight: 600;
+    text-decoration: none;
+}
+.nav-link:hover{
+    background:color-mix(in oklab, var(--life-green) 18%, white);
+
+}
+
+    
+
