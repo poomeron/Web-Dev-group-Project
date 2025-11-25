@@ -1,7 +1,9 @@
 [{
     "heading":{
         "title":"Group Project: Form Page",
-        "header":"FORM PAGE"
+        "header":"FORM PAGE",
+        "search_text": "Search....",
+        "button_text": "Search"
     },
     "ul":{
         "home": "Home",

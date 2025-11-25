@@ -16,6 +16,18 @@ document.addEventListener('DOMContentLoaded', ()=>{
             page_heading.textContent = item.heading.header;
             headerElement.appendChild(page_heading);
 
+            //adding search bar:
+            const searchBar = document.createElement('input');
+            searchBar.type = 'search';
+            searchBar.placeholder= item.heading.search_text;
+
+            //search button:
+            const searchButton = document.createElement('button');
+            searchButton.textContent = item.heading.button_text;
+
+            headerElement.appendChild(searchBar);
+            headerElement.appendChild(searchButton);
+
             //loads the nav bar:
 
             //Home LINK
