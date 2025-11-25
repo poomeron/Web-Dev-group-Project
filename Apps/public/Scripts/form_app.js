@@ -1,6 +1,6 @@
 let headerElement = document.querySelector('#form_title');
 let ulElement = document.querySelector('.nav-bar')
-let formJsonFile = 'form_data.json';
+let formJsonFile = 'data.json';
 
 document.addEventListener('DOMContentLoaded', ()=>{
     fetch(formJsonFile).then(response => response.json())
