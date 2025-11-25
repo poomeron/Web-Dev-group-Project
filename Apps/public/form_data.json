@@ -1,0 +1,22 @@
+[{
+    "heading":{
+        "title":"Group Project: Form Page",
+        "header":"FORM PAGE"
+    },
+    "ul":{
+        "home": "Home",
+        "about":"About",
+        "goals": "Goals",
+        "newsletter": "Our Newsletter",
+        "team":"Our Team"
+    },
+    "links":{
+        "l_home": "index.html",
+        "l_about":"about.html",
+        "l_goals":"goals.html",
+        "l_newsletter": "form.html",
+        "l_team": "team.html"
+    }
+
+    }
+]
