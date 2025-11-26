@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             const goalUl = document.createElement('ul');
             goalUl.setAttribute('class', 'menu');
             goalUl.setAttribute('role', 'menu');
+            goals.appendChild(goalUl);
 
 
             //all the goal nav links : 
@@ -115,8 +116,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
             goal_15_a.setAttribute('role', 'menu_item');
             goalUl.appendChild(goal_15);
             goal_15.appendChild(goal_15_a);
-            
-
+            //lislents for the use to click on the gosl item and then changes some values to make the drop-down appear
+            goals_a.addEventListener('click', (e)=>{
+                e.preventDefault();
+                const expanded = goals_a.getAttribute('aria-expanded') === 'true';
+                goals_a .setAttribute('aria-expanded', String(!expanded));
+                goalUl.style.display= expanded? 'none': 'flex';
+                });
 
             //newsletter link (form)
             const newsletter = document.createElement('li');
@@ -155,9 +161,3 @@ document.addEventListener('DOMContentLoaded', ()=>{
 });
 
 
-goals_a.addEventListener('click', (e)=>{
-    e.prevendDefualt();
-    const expanded = goals_a.getAttribute('aria-expanded') === 'false';
-    goal_a .setAttribute('aria-expanded', String(!expanded));
-    goal_a.style.display= expanded? 'none': 'flex';
-})
