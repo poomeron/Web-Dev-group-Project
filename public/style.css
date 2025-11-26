@@ -117,6 +117,7 @@ menu a {
     
 .menu a:hover{
     background: color-mix(in oklab, var(--life-green) 100%, white);
+    color:white;
 }
 
 .nav-bar >li{
@@ -124,9 +125,25 @@ menu a {
     display: inline-block;
     vertical-align: middle;
 }
-.menu{display: none;}
-li:focus-within .menu, li:hover .menu, .dropdown-toggle[aria-expanded='true'] + .menu{
-    display: flex
-}
+.menu{
+    display: none;
+    list-style: none;
     
+}
+li:focus-within .menu, li:hover .menu, .dropdown-toggle[aria-expanded='true'] + .menu{
+    display: flex;
+}
 
+.menu_item{
+    min-width: 200px;
+    padding: .6rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+    color: var(--ocean-blue);
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+
+}

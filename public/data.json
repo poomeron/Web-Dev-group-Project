@@ -8,7 +8,8 @@
     "ul":{
         "home": "Home",
         "about":"About",
-        "goals": "Goals",
+        "goals_up": "Goals &#10506;",
+        "goals_down": "Goals &#10507;",
         "goal_7": "Goal 7",
         "goal_13": "Goal 13",
         "goal_15": "Goal 15",
