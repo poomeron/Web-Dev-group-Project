@@ -1,7 +1,7 @@
 [{
     "heading":{
         "title":"Group Project: Form Page",
-        "header":"FORM PAGE",
+        "header":"Join Our Newsletter!",
         "search_text": "Search....",
         "button_text": "Search"
     },
@@ -9,13 +9,18 @@
         "home": "Home",
         "about":"About",
         "goals": "Goals",
+        "goal_7": "Goal 7",
+        "goal_13": "Goal 13",
+        "goal_15": "Goal 15",
         "newsletter": "Our Newsletter",
         "team":"Our Team"
     },
     "links":{
         "l_home": "index.html",
         "l_about":"about.html",
-        "l_goals":"goals.html",
+        "l_goal7":"goal_7.html",
+        "l_goal13": "goal_13.html",
+        "l_goal15":"goal_15.html",
         "l_newsletter": "form.html",
         "l_team": "team.html"
     }

@@ -45,6 +45,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
             ulElement.appendChild(home);
             home.appendChild(home_a);
             home_a.setAttribute('class', 'nav-link')
+            //checks if the home pagen link is active
+            if (window.location.pathname==="/"+ item.links.l_home){
+                home_a.setAttribute('id', 'active');
+            }
             
             
             //About link
@@ -54,16 +58,65 @@ document.addEventListener('DOMContentLoaded', ()=>{
             about_a.href = item.links.l_about;
             ulElement.appendChild(about);
             about.appendChild(about_a);
-            about_a.setAttribute('class', 'nav-link')
+            about_a.setAttribute('class', 'nav-link');
+            //checks if the about page link is active
+            if (window.location.pathname==="/"+ item.links.l_about){
+                about_a.setAttribute('id', 'active');
+            }
+        
 
             //goals link
+            //const goals = document.createElement('ul');
+            //const goals_a = document.createElement('a');
+            //goals_a.textContent = item.ul.goals;
+            //goals_a.href = item.links.l_goals;
+            //ulElement.appendChild(goals);
+            //goals.appendChild(goals_a);
+            //goals_a.setAttribute('class', 'nav-link')
+            //to be continued
+
+            //creates a div for the 3 goals to sit in:
             const goals = document.createElement('li');
             const goals_a = document.createElement('a');
             goals_a.textContent = item.ul.goals;
-            goals_a.href = item.links.l_goals;
-            ulElement.appendChild(goals);
+            goals_a.setAttribute('class', 'nav-link dropdown-toggle');
+            goals_a.setAttribute('aria-haspopup', 'true');
+            goals_a.setAttribute('aria-expanded', 'false');
             goals.appendChild(goals_a);
-            goals_a.setAttribute('class', 'nav-link')
+            ulElement.appendChild(goals);
+
+            //dropdown menu
+            const goalUl = document.createElement('ul');
+            goalUl.setAttribute('class', 'menu');
+            goalUl.setAttribute('role', 'menu');
+
+
+            //all the goal nav links : 
+            const goal_7= document.createElement('li');
+            const goal_7_a= document.createElement('a');
+            goal_7_a.textContent = item.ul.goal_7;
+            goal_7_a.href = item.links.l_goal7;
+            goal_7_a.setAttribute('role', 'menu_item');
+            goalUl.appendChild(goal_7);
+            goal_7.appendChild(goal_7_a);
+
+            const goal_13= document.createElement('li');
+            const goal_13_a= document.createElement('a');
+            goal_13_a.textContent = item.ul.goal_13;
+            goal_13_a.href = item.links.l_goal13;
+            goal_13_a.setAttribute('role', 'menu_item');
+            goalUl.appendChild(goal_13);
+            goal_13.appendChild(goal_13_a);
+
+            const goal_15= document.createElement('li');
+            const goal_15_a= document.createElement('a');
+            goal_15_a.textContent = item.ul.goal_15;
+            goal_15_a.href = item.links.l_goal15;
+            goal_15_a.setAttribute('role', 'menu_item');
+            goalUl.appendChild(goal_15);
+            goal_15.appendChild(goal_15_a);
+            
+
 
             //newsletter link (form)
             const newsletter = document.createElement('li');
@@ -73,6 +126,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
             ulElement.appendChild(newsletter);
             newsletter.appendChild(newsletter_a);
             newsletter_a.setAttribute('class', 'nav-link')
+            //checks if the newsletter form page is active
+            if (window.location.pathname==="/"+ item.links.l_newsletter){
+                newsletter_a.setAttribute("id", 'active');
+            }
 
             const team = document.createElement('li');
             const team_a = document.createElement('a');
@@ -81,6 +138,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
             ulElement.appendChild(team);
             team.appendChild(team_a);
             team_a.setAttribute('class', 'nav-link')
+            //checks if the team page link is active
+            if (window.location.pathname ==="/"+ item.links.l_team){
+                team_a.setAttribute('id', 'active');
+            }
 
 
 
@@ -92,3 +153,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
     })
     .catch(error=> console.error("Error fetching Json file"));
 });
+
+
+goals_a.addEventListener('click', (e)=>{
+    e.prevendDefualt();
+    const expanded = goals_a.getAttribute('aria-expanded') === 'false';
+    goal_a .setAttribute('aria-expanded', String(!expanded));
+    goal_a.style.display= expanded? 'none': 'flex';
+})

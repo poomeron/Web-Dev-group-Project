@@ -23,6 +23,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: var(--card);
 }
 .search{
     margin-left: auto;
@@ -54,7 +55,7 @@ h1{
 .main-nav{
     padding: 5px 20px;
     background: var(--card);
-    border-bottom: 1px solid var(--border);
+    border: 1px solid var(--border);
     
 
 
@@ -67,7 +68,7 @@ h1{
     
 }
 .nav-link{
-    min-width: 250px;
+    min-width: 200px;
     padding: .6rem 1rem;
     border: 1px solid var(--border);
     border-radius: 10px;
@@ -80,9 +81,50 @@ h1{
 
 }
 .nav-link:hover{
-    background:color-mix(in oklab, var(--life-green) 18%, white);
+    background:color-mix(in oklab, var(--life-green) 100%, white);
+    color: white;
 
 }
+#active{
+    background: var(--climate-green);
+    color: white;
+}
 
+.dropdown{
+    position: relative;
+    cursor: pointer;
+}
+.menu{
+    position:absolute;
+    top: 110%;
+    left: 0;
+    min-width: 200px;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.25rem;
+}
+.dropdown[aria-expanded='true'].menu {display:flex}
+
+menu a {
+    display: block;
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+}
+.menu a:hover{
+    background: color-mix(in oklab, var(--life-green) 100%, white);
+}
+
+.nav-bar >li{
+    display: inline-block;
+    vertical-align: middle;
+}
+.menu{display: none;}
+li:focus-within .menu, li:hover .menu, .dropdown[aria-expanded='true'] + .menu{
+    display: flex
+}
     
 
