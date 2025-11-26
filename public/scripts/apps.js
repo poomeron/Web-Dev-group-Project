@@ -23,13 +23,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
             const searchBar = document.createElement('input');
             searchBar.type = 'search';
             searchBar.placeholder= item.heading.search_text;
-            //searchBar.setAttribute('class', 'search')
             searchContainer.appendChild(searchBar);
 
             //search button:
             const searchButton = document.createElement('button');
             searchButton.textContent = item.heading.button_text;
-            //searchButton.setAttribute('class', 'search')
+
             searchContainer.appendChild(searchButton);
 
             headerElement.appendChild(searchContainer);
@@ -45,10 +44,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
             ulElement.appendChild(home);
             home.appendChild(home_a);
             home_a.setAttribute('class', 'nav-link')
-            //checks if the home pagen link is active
-            if (window.location.pathname==="/"+ item.links.l_home){
-                home_a.setAttribute('id', 'active');
-            }
+            
+            
             
             
             //About link
@@ -59,10 +56,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             ulElement.appendChild(about);
             about.appendChild(about_a);
             about_a.setAttribute('class', 'nav-link');
-            //checks if the about page link is active
-            if (window.location.pathname==="/"+ item.links.l_about){
-                about_a.setAttribute('id', 'active');
-            }
+            
     
             //creates a div for the 3 goals to sit in:
             const goals = document.createElement('li');
@@ -90,7 +84,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             goal_7_a.setAttribute('role', 'menu_item');
             goalUl.appendChild(goal_7);
             goal_7.appendChild(goal_7_a);
-
+            //goal 13 
             const goal_13= document.createElement('li');
             const goal_13_a= document.createElement('a');
             goal_13_a.textContent = item.ul.goal_13;
@@ -99,7 +93,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             goal_13_a.setAttribute('role', 'menu_item');
             goalUl.appendChild(goal_13);
             goal_13.appendChild(goal_13_a);
-
+            //goal 15
             const goal_15= document.createElement('li');
             const goal_15_a= document.createElement('a');
             goal_15_a.textContent = item.ul.goal_15;
@@ -118,7 +112,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 goals_a .setAttribute('aria-expanded', String(!expanded));
                 goals_a.innerHTML= expanded? item.ul.goals_up: item.ul.goals_down;
                 });
-            
+            //checks if mouse is over the goals tab and changes the arror from up to down and vice versa:
             goals_a.addEventListener('mouseenter', (e)=>{
                 e.preventDefault();
                 goals_a.innerHTML = item.ul.goals_down;
@@ -136,7 +130,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 goals_a.innerHTML = item.ul.goals_up;
             })
 
-
             //newsletter link (form)
             const newsletter = document.createElement('li');
             const newsletter_a = document.createElement('a');
@@ -145,10 +138,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             ulElement.appendChild(newsletter);
             newsletter.appendChild(newsletter_a);
             newsletter_a.setAttribute('class', 'nav-link')
-            //checks if the newsletter form page is active
-            if (window.location.pathname==="/"+ item.links.l_newsletter){
-                newsletter_a.setAttribute("id", 'active');
-            }
+
 
             const team = document.createElement('li');
             const team_a = document.createElement('a');
@@ -157,16 +147,37 @@ document.addEventListener('DOMContentLoaded', ()=>{
             ulElement.appendChild(team);
             team.appendChild(team_a);
             team_a.setAttribute('class', 'nav-link')
-            //checks if the team page link is active
-            if (window.location.pathname ==="/"+ item.links.l_team){
-                team_a.setAttribute('id', 'active');
+
+           //checks if the home pagen link is active
+           //#####JAVA SCRIPT FOR INDEX PAGE HERE:!!!!!!!!!!
+            if (window.location.pathname==="/"+ item.links.l_home){
+                home_a.setAttribute('id', 'active');
+            }
+
+            //checks if the about page link is active
+            //######JAVA SCRIPT FOR ABOUT PAGE HERE !!!!!!:
+            if (window.location.pathname==="/"+ item.links.l_about){
+                about_a.setAttribute('id', 'active');
             }
 
 
+            //checks if the goal page is active:
+            //######JAVA SCRIPT FOR THE GOAL PAGES HERE !!!!!!:
+            if (window.location.pathname ==="/"+ item.links.l_goal7 || window.location.pathname ==="/"+ item.links.l_goal13 || window.location.pathname ==="/"+ item.links.l_goal15){
+                goals_a.setAttribute('id', 'active')
+            }
 
-
+            //checks if the newsletter form page is active
+            //###JAVA SCRIPT FOR THE FORM PAGE HERE!!!!!
+            if (window.location.pathname==="/"+ item.links.l_newsletter){
+                newsletter_a.setAttribute("id", 'active');
+            }
             
-
+            //checks if the team page link is active
+            //####JAVA SCRIPT FOR THE TEAM PAGE HERE !!!!!!
+            if (window.location.pathname ==="/"+ item.links.l_team){
+                team_a.setAttribute('id', 'active');
+            }
 
         };
     })
