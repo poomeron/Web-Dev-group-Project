@@ -148,6 +148,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
             team.appendChild(team_a);
             team_a.setAttribute('class', 'nav-link')
 
+
+
            //checks if the home pagen link is active
            //#####JAVA SCRIPT FOR INDEX PAGE HERE:!!!!!!!!!!
             if (window.location.pathname==="/"+ item.links.l_home){
@@ -161,18 +163,114 @@ document.addEventListener('DOMContentLoaded', ()=>{
             }
 
 
+
             //checks if the goal page is active:
             //######JAVA SCRIPT FOR THE GOAL PAGES HERE !!!!!!:
             if (window.location.pathname ==="/"+ item.links.l_goal7 || window.location.pathname ==="/"+ item.links.l_goal13 || window.location.pathname ==="/"+ item.links.l_goal15){
                 goals_a.setAttribute('id', 'active')
             }
 
+
+
             //checks if the newsletter form page is active
             //###JAVA SCRIPT FOR THE FORM PAGE HERE!!!!!
             if (window.location.pathname==="/"+ item.links.l_newsletter){
                 newsletter_a.setAttribute("id", 'active');
+
+                // creates heading and paragraph about newsletter:
+                let headerForm = document.querySelector('.mainForm');
+                
+                const h2Form = document.querySelector('#page-title');
+                h2Form.textContent = item.form.small_heading;
+                //headerForm.appendChild(h2Form);
+
+                const h3FormPara = document.querySelector('#page-para');
+                h3FormPara.textContent = item.form.paragraph;
+                //headerForm.appendChild(h3FormPara);
+
+                let sectionForm = document.querySelector('.sectionForm');
+
+                //creates the form elements and applies attributes:
+                const theForm = document.createElement('form');
+                theForm.setAttribute('id', 'myForm');
+                theForm.setAttribute('method', 'POST');
+                theForm.setAttribute('action', '/contact');
+                sectionForm.appendChild(theForm);
+
+                const theFieldset = document.createElement('fieldset');
+                theForm.appendChild(theFieldset);
+
+                //creates legend for the form:
+                const theLegend = document.createElement('legend');
+                theLegend.textContent = item.form.legend;
+                theFieldset.appendChild(theLegend);
+
+                const f_nameLabel = document.createElement('label');
+                f_nameLabel.setAttribute('for', 'firstname');
+                f_nameLabel.textContent = item.form.f_nameLabel;
+                theFieldset.appendChild(f_nameLabel);
+
+                const f_nameInput = document.createElement('input');
+                f_nameInput.setAttribute('id', 'firstname');
+                f_nameInput.setAttribute('name', 'firstname');
+                f_nameInput.setAttribute('type', 'text');
+                f_nameInput.setAttribute('required', '');
+                theFieldset.appendChild(f_nameInput);
+
+                const l_nameLabel = document.createElement('label');
+                l_nameLabel.setAttribute('for', 'lastname');
+                l_nameLabel.textContent = item.form.l_nameLabel;
+                theFieldset.appendChild(l_nameLabel);
+
+                const l_nameInput = document.createElement('input');
+                l_nameInput.setAttribute('id', 'lastname');
+                l_nameInput.setAttribute('name', 'lastname');
+                l_nameInput.setAttribute('type', 'text');
+                l_nameInput.setAttribute('required', '');
+                theFieldset.appendChild(l_nameInput);
+
+                const emailLabel = document.createElement('label');
+                emailLabel.setAttribute('for', 'email');
+                emailLabel.textContent= item.form.emailLabel;
+                theFieldset.appendChild(emailLabel)
+
+                const emailInput = document.createElement('input');
+                emailInput.setAttribute('id', 'email');
+                emailInput.setAttribute('name', 'email');
+                emailInput.setAttribute('type', 'text');
+                emailInput.setAttribute('required', '');
+                theFieldset.appendChild(emailInput)
+
+                const messageLabel = document.createElement('label');
+                messageLabel.setAttribute('for', 'message');
+                messageLabel.textContent =item.form.messageLabel;
+                theFieldset.appendChild(messageLabel)
+
+                const messageInput = document.createElement('textarea');
+                messageInput.setAttribute('id', 'message');
+                messageInput.setAttribute('required', '');
+                theFieldset.appendChild(messageInput);
+
+                const formButton = document.createElement('input');
+                formButton.setAttribute('class', 'submit_button');
+                formButton.setAttribute('type', 'submit');
+                formButton.setAttribute('value', 'Submit Message');
+                theFieldset.appendChild(formButton);
+
+                const pForm = document.createElement('p');
+                pForm.setAttribute('class', 'confirmMessage');
+                pForm.textContent = item.form.p;
+                theFieldset.appendChild(pForm);
+
+
+
+
+
+
             }
             
+
+
             //checks if the team page link is active
             //####JAVA SCRIPT FOR THE TEAM PAGE HERE !!!!!!
             if (window.location.pathname ==="/"+ item.links.l_team){
