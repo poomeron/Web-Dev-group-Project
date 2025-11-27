@@ -154,13 +154,13 @@ document.addEventListener('DOMContentLoaded', ()=>{
            //#####JAVA SCRIPT FOR INDEX PAGE HERE:!!!!!!!!!!
             if (window.location.pathname==="/"+ item.links.l_home){
                 home_a.setAttribute('id', 'active');
-            }
+            };
 
             //checks if the about page link is active
             //######JAVA SCRIPT FOR ABOUT PAGE HERE !!!!!!:
             if (window.location.pathname==="/"+ item.links.l_about){
                 about_a.setAttribute('id', 'active');
-            }
+            };
 
 
 
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             //######JAVA SCRIPT FOR THE GOAL PAGES HERE !!!!!!:
             if (window.location.pathname ==="/"+ item.links.l_goal7 || window.location.pathname ==="/"+ item.links.l_goal13 || window.location.pathname ==="/"+ item.links.l_goal15){
                 goals_a.setAttribute('id', 'active')
-            }
+            };
 
 
 
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 const theForm = document.createElement('form');
                 theForm.setAttribute('id', 'myForm');
                 theForm.setAttribute('method', 'POST');
-                theForm.setAttribute('action', '/contact');
+                theForm.setAttribute('action', '/newsletter');
                 sectionForm.appendChild(theForm);
 
                 const theFieldset = document.createElement('fieldset');
@@ -249,6 +249,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 const messageInput = document.createElement('textarea');
                 messageInput.setAttribute('id', 'message');
                 messageInput.setAttribute('required', '');
+                messageInput.setAttribute('placeholder', item.form.messagePlaceholder)
                 theFieldset.appendChild(messageInput);
 
                 const formButton = document.createElement('input');
@@ -262,12 +263,39 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 pForm.textContent = item.form.p;
                 theFieldset.appendChild(pForm);
 
+                const myForm = document.querySelector('#myForm');
+                //
+                if (myForm){
+                    myForm.addEventListener('submit', (e)=>{
+                        e.preventDefault();
+                        const confirmMessage = document.querySelector('.confirmMessage');
+
+                        const formBody={
+                            first_name: document.querySelector('#firstname').value,
+                            last_name: document.querySelector('#lastname').value,
+                            email: document.querySelector('#email').value,
+                            message: document.querySelector('#message').value,
+                        };
+                        const requestHeaders = {"Content-Type": "application/json"};
+                        //confirmMessage.textContent  = `Hi ${document.querySelector('#firstname').value}, your message has been recieved, we will contact you at ${document.querySelector('#email').value}`;
+
+                        fetch("/newsletter", {
+                            method: 'POST',
+                            headers: requestHeaders,
+                            body: JSON.stringify(formBody)
+                        }).then(response => response.json())
+                        .then((responseData)=>{
+                            console.log(responseData);
+                            confirmMessage.textContent = `Hi ${responseData.first_name} ${responseData.last_name}, your message has been recieved, we will contact you at ${responseData.email}`
+                        });
+
+                    })
+                };
 
 
 
 
-
-            }
+            };
             
 
 
@@ -275,7 +303,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             //####JAVA SCRIPT FOR THE TEAM PAGE HERE !!!!!!
             if (window.location.pathname ==="/"+ item.links.l_team){
                 team_a.setAttribute('id', 'active');
-            }
+            };
 
         };
     })

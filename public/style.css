@@ -10,140 +10,81 @@
     --focus:#0B5C9C;
 }
 
-body{
-    background-color: var(--paper);
-    line-height :16px;
+body{background-color: var(--paper); line-height :16px;}
 
-}
+h1, h2{font-family: "Montserrat", "Open Sans", Arial, sans-serif;}
 
-h1{
-    font-size: 50px;
-}
-#form_title{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: var(--card);
-}
-.search{
-    margin-left: auto;
-    display: flex;
-    gap: 0.5rem;
-}
-.search input{
-    padding: 0.6rem 0.8rem;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    min-width: 200px;
-    background: #fff;
-    color: #111;
 
-}
-.search button{
-    padding: 0.6rem 0.75rem;
-    border: 1px solid var(--border);
-    background: #fff;
-    border-radius: 8px;
-    cursor: pointer;
-}
-.search input, .search button{
-    outline: 1px solid color-mix(in oklab, var(--focus) 35%, white);
-    outline-offset: 0px;
 
-}
+h1{font-size: 50px;}
+h3{font-weight: normal; font-family: "Open Sans", Arial, Helvetica, sans-serif;}
 
-.main-nav{
-    padding: 5px 20px;
-    background: var(--card);
-    border: 1px solid var(--border);
+#page-para{max-width: 700px; margin: 0px 50px; text-align: center; font-size: 18px; line-height: 20px;}
+
+#form_title{display: flex; align-items: center; justify-content: space-between; background: var(--card);}
+
+.search{ margin-left: auto; display: flex; gap: 0.5rem;}
+
+.search input{ padding: 0.6rem 0.8rem; border: 1px solid var(--border); border-radius: 8px; min-width: 200px;
+    background: #fff; color: #111;}
+
+.search button{padding: 0.6rem 0.75rem; border: 1px solid var(--border); background: #fff;
+    border-radius: 8px; cursor: pointer;}
+
+.search input, .search button{ outline: 1px solid color-mix(in oklab, var(--focus) 35%, white); outline-offset: 0px;}
+
+.main-nav{ padding: 5px 20px; background: var(--card); border: 1px solid var(--border);}
+
+.nav-bar{ display: grid;  grid-auto-flow: column; gap: 6px; list-style: none;}
+
+.nav-link{ min-width: 200px; padding: .6rem 1rem; border: 1px solid var(--border); border-radius: 10px;
+    background: #fff; color: var(--ocean-blue); font-weight: 600; font-family:"Open Sans", Arial, Helvetica, sans-serif;
+    text-decoration: none; text-align: center; display: inline-block}
+
+.nav-link:hover{ background:color-mix(in oklab, var(--life-green) 100%, white); color: white;}
+
+#active{ background: var(--climate-green); color: white;}
+
+.dropdown{ position: relative; cursor: pointer;}
+
+.menu{ position:absolute; top: 110%; left: 0; min-width: 200px; display: none; flex-direction: column; gap: 0;
+    background: #fff; border: 1px solid var(--border); border-radius: 10px; padding: 0.25rem;}
+
+
+menu a { display: block; padding: 0.6rem 0.8rem; border-radius: 8px;}
     
+.menu a:hover{ background: color-mix(in oklab, var(--life-green) 100%, white); color:white;}
+
+.nav-bar >li{ position: relative; display: inline-block; vertical-align: middle;}
+
+.menu{display: none; list-style: none;}
+
+li:focus-within .menu, li:hover .menu, .dropdown-toggle[aria-expanded='true'] + .menu{ display: flex;}
+
+.menu_item{ min-width: 200px; padding: .6rem 1rem; border: 1px solid var(--border); border-radius: 10px;
+    background: #fff; color: var(--ocean-blue); font-weight: 600; font-family: "Open Sans", Arial, Helvetica, sans-serif; text-decoration: none; text-align: center;
+    display: inline-block;}
+
+main{ padding: .6rem 1rem; border: 1px solid var(--border); border-radius: 10px; background: #fff;
+    color: #111; font-weight: 600; text-decoration: none; text-align: center; display: inline-block;}
+
+.mainForm{max-width: 800px; margin: 24px auto; padding:0 20px; display: block; gap: 24px;}
+
+form{ display: flex; padding: 20px 0px}
+
+fieldset{display: flex; flex-direction: flex-start; flex-wrap: wrap; margin: auto; width: 92%;
+     border: 1px solid var(--border); border-radius: 10px; font-family: "Open Sans", Arial, Helvetica, sans-serif}
+
+legend{padding: 5px; font-size: medium; word-spacing: 4px}
+
+input{display: block; width: 95%; padding: 10px; margin: 10px 5px; border: 1px solid var(--border); align-self: left}
+
+.submit_button{max-width: auto; margin-top: 10px; padding: .6rem 1rem; border: 1px solid var(--border); border-radius: 10px;
+    background: var(--climate-green); color: white; font-weight: 600; font-family:"Open Sans", Arial, Helvetica, sans-serif;
+    text-decoration: none; text-align: center; display: inline-block; cursor: pointer;}
+
+.confirmMessage{margin-top: 10px}
+.submit_button, .confirmMessage{text-align: center; align-self: center; margin-left: auto; margin-right: auto}
 
 
-}
-.nav-bar{
-    display: grid; 
-    grid-auto-flow: column;
-    gap: 6px;
-    list-style: none;
-    
-}
-.nav-link{
-    min-width: 200px;
-    padding: .6rem 1rem;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    background: #fff;
-    color: var(--ocean-blue);
-    font-weight: 600;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block
-
-}
-.nav-link:hover{
-    background:color-mix(in oklab, var(--life-green) 100%, white);
-    color: white;
-
-}
-#active{
-    background: var(--climate-green);
-    color: white;
-}
-
-.dropdown{
-    position: relative;
-    cursor: pointer;
-}
-.menu{
-    position:absolute;
-    top: 110%;
-    left: 0;
-    min-width: 200px;
-    display: none;
-    flex-direction: column;
-    gap: 0;
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 0.25rem;
-}
-
-
-menu a {
-    display: block;
-    padding: 0.6rem 0.8rem;
-    border-radius: 8px;
-}
-    
-.menu a:hover{
-    background: color-mix(in oklab, var(--life-green) 100%, white);
-    color:white;
-}
-
-.nav-bar >li{
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-}
-.menu{
-    display: none;
-    list-style: none;
-    
-}
-li:focus-within .menu, li:hover .menu, .dropdown-toggle[aria-expanded='true'] + .menu{
-    display: flex;
-}
-
-.menu_item{
-    min-width: 200px;
-    padding: .6rem 1rem;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    background: #fff;
-    color: var(--ocean-blue);
-    font-weight: 600;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
-
-}
+textarea{display: block; width: 95%; padding: 10px; margin: 10px 5px; border: 1px solid var(--border)}
