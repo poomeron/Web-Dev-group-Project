@@ -285,8 +285,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
                             body: JSON.stringify(formBody)
                         }).then(response => response.json())
                         .then((responseData)=>{
-                            console.log(responseData);
-                            confirmMessage.textContent = `Hi ${responseData.first_name} ${responseData.last_name}, your message has been recieved, we will contact you at ${responseData.email}`
+                            let text = `Hi ${responseData.first_name} ${responseData.last_name}, your confirmation email will be sent to ${responseData.email}`;
+                            confirmMessage.textContent = text;                     
                         });
 
                     })
