@@ -1,5 +1,6 @@
 let headerElement = document.querySelector('#form_title');
-let ulElement = document.querySelector('.nav-bar');
+let ulElement = document.querySelector('.nav-bar');//before nav-bar
+//ulElement.setAttribute('class', 'Hidden-nav');//
 let formJsonFile = 'data.json';
 
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -147,7 +148,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
             ulElement.appendChild(team);
             team.appendChild(team_a);
             team_a.setAttribute('class', 'nav-link')
-
 
 
            //checks if the home pagen link is active
