@@ -28,11 +28,29 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
             //search button:
             const searchButton = document.createElement('button');
-            searchButton.textContent = item.heading.button_text;
+            searchButton.innerHTML= '<i class="fa fa-search"></i>';
 
             searchContainer.appendChild(searchButton);
 
             headerElement.appendChild(searchContainer);
+            
+            // makes the buttons for nav and search when screen is a certain size
+            const mobileIcon = document.createElement('div');
+            mobileIcon.setAttribute('class', 'mobileIcon');
+
+            const searchBtn = document.createElement('button');
+            searchBtn.setAttribute('class', 'iconBtn');
+            searchBtn.setAttribute('id', 'search-header');
+            searchBtn.innerHTML= '<i class="fa fa-search"></i>';
+
+            const menuBtn = document.createElement('button');
+            menuBtn.setAttribute('class', 'iconBtn');
+            menuBtn.setAttribute('id', 'menu-header');
+            menuBtn.innerHTML= '<i class= "fa fa-bars"></i>';
+
+            mobileIcon.appendChild(searchBtn);
+            mobileIcon.appendChild(menuBtn);
+            headerElement.appendChild(mobileIcon);
 
 
             //loads the nav bar:
@@ -149,6 +167,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
             team.appendChild(team_a);
             team_a.setAttribute('class', 'nav-link')
 
+            //when screen is small, opens nav bar when pressed
+            menuBtn.addEventListener('click', (e)=>{
+                e.preventDefault();
+                ulElement.classList.toggle('open');
+            })
+            searchBtn.addEventListener('click', (e)=>{
+                e.preventDefault();
+                searchContainer.classList.toggle('open');
+            })
 
            //checks if the home pagen link is active
            //#####JAVA SCRIPT FOR INDEX PAGE HERE:!!!!!!!!!!
