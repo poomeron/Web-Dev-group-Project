@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meet the Team</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="scripts/team.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="form.html">Sign up</a>
+      <a href="team.html" aria-current="page">Team</a>
+    </nav>
+  </header>
+
+  <main class="team-page">
+    <section class="team-intro">
+      <h1 id="team-title"></h1>
+      <p id="team-intro-text"></p>
+    </section>
+
+    <section id="team-members" class="team-grid" aria-label="Team members">
+      <!-- Cards injected with JS -->
+    </section>
+
+    <p id="team-error" class="hidden" role="alert"></p>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span></p>
+  </footer>
+</body>
+</html>
 
