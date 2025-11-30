@@ -35,10 +35,86 @@
         "messageLabel": "Message",
         "p": "*Required Content",
         "messagePlaceholder": "Tell us what you’re most interested in learning or doing."
-        
-
-
+    },
+    "teamPage": {
+        "pageTitle": "Our Project Team",
+        "intro": "Our group collaborated to design and build this website, with each member contributing to different pages and the final integration of the project.",
+        "members": [
+            {
+                "name": "Riken Gurung",
+                "role": "Homepage Developer",
+                "bio": "Responsible for creating the main homepage layout and styling.",
+                "responsibilities": [
+                    "Developing the index.html page",
+                    "Applying HTML and CSS for layout and structure",
+                    "Ensuring the homepage followed accessibility guidelines"
+                ],
+                "contributions": [
+                    "Built the core homepage design",
+                    "Styled navigation and main sections",
+                    "Improved spacing and layout consistency"
+                ]
+            },
+            {
+                "name": "Tomas Wiliams",
+                "role": "Goals Page Developer",
+                "bio": "Created the sustainability goals pages, providing layout, content structure and consistent styling.",
+                "responsibilities": [
+                    "Developing the Goal 7, 13 and 15 pages",
+                    "Structuring content for each sustainability topic",
+                    "Ensuring all goal pages matched the overall site theme"
+                ],
+                "contributions": [
+                    "Completed all three goal pages",
+                    "Maintained formatting and clarity across pages",
+                    "Improved visual consistency and readability"
+                ]
+            },
+            {
+                "name": "Muhammad Ahmed",
+                "role": "Team Page Developer",
+                "bio": "Worked on the layout and structure of the team information page using HTML and CSS.",
+                "responsibilities": [
+                    "Building the initial teams.html page",
+                    "Creating the HTML and CSS layout for team information",
+                    "Ensuring styling matched the rest of the website"
+                ],
+                "contributions": [
+                    "Completed the teams.html page structure",
+                    "Created consistent section layout",
+                    "Ensured style compatibility across pages"
+                ]
+            },
+            {
+                "name": "Cameron Witherick",
+                "role": "Form Page Developer",
+                "bio": "Created and styled the newsletter signup form.",
+                "responsibilities": [
+                    "Developing the form.html page",
+                    "Building form structure using HTML",
+                    "Ensuring labels, inputs and formatting followed standards"
+                ],
+                "contributions": [
+                    "Built the full signup form layout",
+                    "Styled input fields and form presentation",
+                    "Ensured the form met assignment requirements"
+                ]
+            },
+            {
+                "name": "Whole Team",
+                "role": "Integration & Documentation",
+                "bio": "Worked collaboratively to combine all pages, test the site and complete documentation.",
+                "responsibilities": [
+                    "Putting all pages together",
+                    "Ensuring navigation worked across all pages",
+                    "Completing documentation through Blackboard and Trello"
+                ],
+                "contributions": [
+                    "Integrated all pages into one project",
+                    "Tested site functionality as a group",
+                    "Completed team documentation tasks"
+                ]
+            }
+        ]
     }
-
-    }
-]
+}]
