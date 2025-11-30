@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meet the Team</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="style.css" />
-  <script src="scripts/team.js" defer></script>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="scripts/apps.js" defer></script>
+    <script src="scripts/team.js" defer></script>
+
+    <title>Our Team</title>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="form.html">Sign up</a>
-      <a href="team.html" aria-current="page">Team</a>
-    </nav>
-  </header>
+    <div id="Wrapper">
+        <header>
+            <h1>Norwich Yoga Studio</h1>
+            <a id="Burger"><i class="fa fa-bars"></i></a>
+        </header>
 
-  <main class="team-page">
-    <section class="team-intro">
-      <h1 id="team-title"></h1>
-      <p id="team-intro-text"></p>
-    </section>
+        <nav>
+            <ul class="Hidden" id="nav-list"></ul>
+        </nav>
+    </div>
 
-    <section id="team-members" class="team-grid" aria-label="Team members">
-      <!-- Cards injected with JS -->
-    </section>
+    <main>
+        <section id="team-section">
+            <h2 id="team-title"></h2>
+            <p id="team-intro"></p>
 
-    <p id="team-error" class="hidden" role="alert"></p>
-  </main>
+            <div id="team-members" class="team-grid"></div>
+            <p id="team-error" class="hidden"></p>
+        </section>
+    </main>
 
-  <footer>
-    <p>&copy; <span id="year"></span></p>
-  </footer>
+    <footer>
+        <h5>Copyright © 2025 Norwich Yoga Studio</h5>
+    </footer>
 </body>
 </html>
+
 
