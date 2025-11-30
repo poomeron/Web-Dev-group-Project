@@ -320,21 +320,91 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 };
 
 
-
-
             };
             
 
 
             //checks if the team page link is active
-            //####JAVA SCRIPT FOR THE TEAM PAGE HERE !!!!!!
+            //####JAVA SCRIPT FOR THE TEAM PAGE HERE !!!!!! 
             if (window.location.pathname ==="/"+ item.links.l_team){
                 team_a.setAttribute('id', 'active');
+
+                // build the team page content from JSON
+                let teamData = item.teamPage;
+
+                let teamTitle = document.querySelector('#team-title');
+                let teamIntro = document.querySelector('#team-intro');
+                let teamMembers = document.querySelector('#team-members');
+                let teamError = document.querySelector('#team-error');
+
+                if (teamData && teamTitle && teamIntro && teamMembers){
+
+                    teamTitle.textContent = teamData.pageTitle;
+                    teamIntro.textContent = teamData.intro;
+
+                    teamMembers.innerHTML = "";
+
+                    teamData.members.forEach(function(member){
+
+                        let card = document.createElement('article');
+                        card.setAttribute('class', 'team-card');
+
+                        let nameHeading = document.createElement('h3');
+                        nameHeading.textContent = member.name;
+                        card.appendChild(nameHeading);
+
+                        let rolePara = document.createElement('p');
+                        rolePara.setAttribute('class','team-role');
+                        rolePara.textContent = member.role;
+                        card.appendChild(rolePara);
+
+                        let bioHeading = document.createElement('h4');
+                        bioHeading.textContent = "Bio";
+                        card.appendChild(bioHeading);
+
+                        let bioPara = document.createElement('p');
+                        bioPara.textContent = member.bio;
+                        card.appendChild(bioPara);
+
+                        let respHeading = document.createElement('h4');
+                        respHeading.textContent = "Responsibilities";
+                        card.appendChild(respHeading);
+
+                        let respList = document.createElement('ul');
+                        if (member.responsibilities){
+                            member.responsibilities.forEach(function(r){
+                                let li = document.createElement('li');
+                                li.textContent = r;
+                                respList.appendChild(li);
+                            });
+                        }
+                        card.appendChild(respList);
+
+                        let contribHeading = document.createElement('h4');
+                        contribHeading.textContent = "Contributions";
+                        card.appendChild(contribHeading);
+
+                        let contribList = document.createElement('ul');
+                        if (member.contributions){
+                            member.contributions.forEach(function(c){
+                                let li = document.createElement('li');
+                                li.textContent = c;
+                                contribList.appendChild(li);
+                            });
+                        }
+                        card.appendChild(contribList);
+
+                        teamMembers.appendChild(card);
+                    });
+
+                } else if (teamError){
+                    teamError.textContent = "Could not load team information.";
+                    teamError.classList.remove('hidden');
+                }
+
             };
 
         };
     })
     .catch(error=> console.error("Error fetching Json file"));
 });
-
-
