@@ -1,37 +1,31 @@
+<!DOCTYPE html>
 <html>
 
     <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap">
         <link rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="style.css">
+        <script src="scripts/apps.js" defer></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="keywords" content="team page, HTML">
-        <meta name="description" content="Team page for group project">
+        <meta name="keywords" content="Team page, HTML">
+        <meta name="description" content="Group Project: Team page">
         <meta name="author" content="Group Members">
         <meta charset="utf-8">
-        <script src="scripts/apps.js" defer></script>
     </head>
 
     <body>
-        <div id="Wrapper">
-            <header>
-                <title>Norwich Yoga studio</title> 
-                <h1>Norwich Yoga Studio</h1>
-                <a id="Burger"><i class="fa fa-bars"></i></a>
-            </header>
-
-            <nav>
-                <ul class="Hidden">
-                    <li><a href="index.html" class="Navigation">Home</a></li>
-                    <li><a href="classes.html" class="Navigation">Classes</a></li>
-                    <li><a href="schedule.html" class="Navigation">Schedule</a></li>
-                    <li><a href="form.html" class="Navigation">Contact</a></li>
-                    <li class="active"><a href="team.html" class="Navigation">Team</a></li>
-                </ul>
-            </nav>
+        <div>
+            <!-- apps.js fills this header from data.json -->
+            <header id="form_title"></header>
         </div>
 
-        <main>
+        <nav class="main-nav">
+            <!-- apps.js builds the nav links here -->
+            <ul class="nav-bar"></ul>
+        </nav>
+
+        <main class="mainForm">
             <section id="team-section">
                 <h2 id="team-title"></h2>
                 <p id="team-intro"></p>
@@ -43,9 +37,5 @@
                 <p id="team-error" class="hidden"></p>
             </section>
         </main>
-
-        <footer>
-            <h5>Copyright © 2025 Norwich Yoga Studio</h5>
-        </footer>
     </body>
 </html>
