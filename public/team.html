@@ -1,45 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <head>
+        <link rel="stylesheet"
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="keywords" content="team page, HTML">
+        <meta name="description" content="Team page for group project">
+        <meta name="author" content="Group Members">
+        <meta charset="utf-8">
+        <script src="team.js" defer></script>
+    </head>
 
-    <script src="scripts/apps.js" defer></script>
-    <script src="scripts/team.js" defer></script>
+    <body>
+        <div id="Wrapper">
+            <header>
+                <title>Norwich Yoga studio</title> 
+                <h1>Norwich Yoga Studio</h1>
+                <a id="Burger"><i class="fa fa-bars"></i></a>
+            </header>
 
-    <title>Our Team</title>
-</head>
+            <nav>
+                <ul class="Hidden">
+                    <li><a href="index.html" class="Navigation">Home</a></li>
+                    <li><a href="classes.html" class="Navigation">Classes</a></li>
+                    <li><a href="schedule.html" class="Navigation">Schedule</a></li>
+                    <li><a href="form.html" class="Navigation">Contact</a></li>
+                    <li class="active"><a href="team.html" class="Navigation">Team</a></li>
+                </ul>
+            </nav>
+        </div>
 
-<body>
-    <div id="Wrapper">
-        <header>
-            <h1>Norwich Yoga Studio</h1>
-            <a id="Burger"><i class="fa fa-bars"></i></a>
-        </header>
+        <main>
+            <section id="team-section">
+                <h2 id="team-title"></h2>
+                <p id="team-intro"></p>
 
-        <nav>
-            <ul class="Hidden" id="nav-list"></ul>
-        </nav>
-    </div>
+                <section id="team-members" class="team-grid">
+                    <!-- team cards go here from JS -->
+                </section>
 
-    <main>
-        <section id="team-section">
-            <h2 id="team-title"></h2>
-            <p id="team-intro"></p>
+                <p id="team-error" class="hidden"></p>
+            </section>
+        </main>
 
-            <div id="team-members" class="team-grid"></div>
-            <p id="team-error" class="hidden"></p>
-        </section>
-    </main>
-
-    <footer>
-        <h5>Copyright © 2025 Norwich Yoga Studio</h5>
-    </footer>
-</body>
+        <footer>
+            <h5>Copyright © 2025 Norwich Yoga Studio</h5>
+        </footer>
+    </body>
 </html>
-
-
