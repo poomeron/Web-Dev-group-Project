@@ -114,8 +114,10 @@
                     "Tested site functionality as a group",
                     "Completed team documentation tasks"
                 ]
-            },
-            "goals": {
+            }
+        ]
+    },
+    "goals": {
             "goal_7": [
                 {
                     "heading":[
@@ -203,6 +205,4 @@
                 }
             ]
         }
-        ]
-    }
 }]
