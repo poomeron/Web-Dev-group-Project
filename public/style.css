@@ -152,6 +152,11 @@ textarea{display: block; width: 95%; padding: 10px; margin: 10px 5px; border: 1p
     margin: 10px;
 }
 
+#about-para{max-width: 700px; margin: 0px 50px; text-align: center; font-size: 18px; line-height: 20px;}
+.mainAbout{max-width: 800px; margin: 24px auto; padding:0 20px; display: block; gap: 24px;}
+
+#about-img{max-width: 230px; padding: 20px 0px}
+
 @media only screen and (max-width: 808px){
     #form_title{display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; position: relative}
 
