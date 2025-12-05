@@ -93,7 +93,7 @@ textarea{display: block; width: 95%; padding: 10px; margin: 10px 5px; border: 1p
 
 #topSection {
     padding: 10px;
-    margin: 10px, auto, 100px, auto;
+    margin: 10px auto 100px auto;
     background-color: var(--border);
     border-radius: 10px;
     overflow: hidden;
@@ -112,7 +112,7 @@ textarea{display: block; width: 95%; padding: 10px; margin: 10px 5px; border: 1p
 
 #about_goals {
     padding: 10px;
-    margin: 100px, auto, 10px, auto;
+    margin: 100px auto 10px auto;
     background-color: var(--border);
     border-radius: 10px;
     overflow: hidden;
@@ -120,7 +120,7 @@ textarea{display: block; width: 95%; padding: 10px; margin: 10px 5px; border: 1p
 
 #bottomSection {
     padding: 10px;
-    margin: 10px, auto, 100px, auto;
+    margin: 10px auto 100px auto;
     background-color: var(--border);
     border-radius: 10px;
     overflow: hidden;
