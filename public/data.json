@@ -204,5 +204,20 @@
                     "thing4": "Don't buy products tested on animals: Check the labels on the products you buy."
                 }
             ]
-        }
+        },
+    "about": {
+        "small_heading": "What are the Global Goals 7, 13 and 15?",
+        "para1": "Global Goals 7, 13 and 15 are the three goals created by the United Nations inorder to create a guide for countries to pursue a safer, fairer and more sustainable future.",
+        "para2": "Goal 7 focuses on ensuring that everyone has access to clean, reliable and affordable energy. This is essential for development and reducing pollution.",
+        "para3": "Goal 13 calls for urgent action to tackle climate change by reducing emissions and combating climate related impacts.",
+        "para4": "Goal 15's goal is to protect life on land by safeguarding forests, promote sustainable use of natural ecosystems and to prevent loss of biodiversity.",
+        "para5": "Together, these goals highlight the importance of clean energy, climate action and healthy ecosystems in supporting global well-being.",
+        "goal_7": "/assets/goal7.png",
+        "goal_13": "/assets/goal13.png",
+        "goal_15": "/assets/goal15.png",
+        "alt_7": "Goal 7",
+        "alt_13": "Goal 13",
+        "alt_15": "Goal 15"
+    }
+    
 }]
