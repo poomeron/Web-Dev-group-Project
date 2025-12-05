@@ -187,6 +187,55 @@ document.addEventListener('DOMContentLoaded', ()=>{
             //######JAVA SCRIPT FOR ABOUT PAGE HERE !!!!!!:
             if (window.location.pathname==="/"+ item.links.l_about){
                 about_a.setAttribute('id', 'active');
+                //creates the main element
+                const mainAbout = document.querySelector('.mainAbout')
+
+                //creates page title:
+                const h2About = document.querySelector('#about-page-title');
+                h2About.textContent = item.about.small_heading;
+
+                //creates the page paragraph:
+                const h3About = document.querySelector('#about-para')
+
+                const h3AboutPara1 = document.createElement('p');
+                h3AboutPara1.textContent = item.about.para1;
+                h3About.appendChild(h3AboutPara1);
+
+                const h3AboutPara2 = document.createElement('p');
+                h3AboutPara2.textContent = item.about.para2;
+                h3About.appendChild(h3AboutPara2);
+
+                const h3AboutPara3 = document.createElement('p');
+                h3AboutPara3.textContent = item.about.para3;
+                h3About.appendChild(h3AboutPara3);
+
+                const h3AboutPara4 = document.createElement('p');
+                h3AboutPara4.textContent = item.about.para4;
+                h3About.appendChild(h3AboutPara4);
+
+                const h3AboutPara5 = document.createElement('p');
+                h3AboutPara5.textContent = item.about.para5;
+                h3About.appendChild(h3AboutPara5);
+                
+                const imgG7 = document.createElement('img');
+                imgG7.setAttribute('id', 'about-img');
+                imgG7.src = item.about.goal_7;
+                imgG7.alt = item.about.alt_7;
+                h3About.appendChild(imgG7);
+
+                const imgG13 = document.createElement('img');
+                imgG13.setAttribute('id', 'about-img');
+                imgG13.src = item.about.goal_13;
+                imgG13.alt = item.about.alt_13;
+                h3About.appendChild(imgG13);
+            
+
+                const imgG15 = document.createElement('img');
+                imgG15.setAttribute('id', 'about-img');
+                imgG15.src = item.about.goal_15;
+                imgG15.alt = item.about.alt_15;
+                h3About.appendChild(imgG15);
+            
             };
 
 
