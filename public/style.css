@@ -89,6 +89,69 @@ textarea{display: block; width: 95%; padding: 10px; margin: 10px 5px; border: 1p
 
 .mobileIcon{display:none}
 
+/* added for goals */
+
+#topSection {
+    padding: 10px;
+    margin: 10px, auto, 100px, auto;
+    background-color: var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    justify-content: center;
+}
+
+#goal {
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    justify-content: center;
+}
+
+#about_goals {
+    padding: 10px;
+    margin: 100px, auto, 10px, auto;
+    background-color: var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#bottomSection {
+    padding: 10px;
+    margin: 10px, auto, 100px, auto;
+    background-color: var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.services {
+    float: left;
+    width: 50%;
+    background-color: var(--border);
+    border-radius: 20px;
+    box-sizing: border-box;
+    border-color: var(--charcoal);
+    text-align: left;
+    background-color: var(--card);
+}
+
+.services li{
+    margin: auto;
+}
+
+#targets {
+    list-style-type: none;
+}
+
+#help {
+    list-style-type: none;
+}
+#goal_lists{
+    margin: 10px;
+}
+
 @media only screen and (max-width: 786px){
     #form_title{display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; position: relative}
 
@@ -115,4 +178,14 @@ textarea{display: block; width: 95%; padding: 10px; margin: 10px 5px; border: 1p
     .nav-link, .menu_item{display: block; width: 100%; padding: 10px 16px ; min-width: 0;}
 
     .menu{position: static; box-shadow: none; border: none; padding: 0}
+
+    /*changes layout of goal pages*/
+    .services {
+        width: 92%;
+        background-color: var(--card);
+        padding: 24px 11px;
+        margin: auto auto 20px 15px;
+        border-radius: 20px;
+        box-sizing: border-box;
+    }
 }

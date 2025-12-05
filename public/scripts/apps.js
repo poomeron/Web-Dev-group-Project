@@ -195,6 +195,338 @@ document.addEventListener('DOMContentLoaded', ()=>{
             //######JAVA SCRIPT FOR THE GOAL PAGES HERE !!!!!!:
             if (window.location.pathname ==="/"+ item.links.l_goal7 || window.location.pathname ==="/"+ item.links.l_goal13 || window.location.pathname ==="/"+ item.links.l_goal15){
                 goals_a.setAttribute('id', 'active')
+                if (document.querySelector("#goal_7")) {
+                        // Grab the first object inside goal_7
+                        const goal_7 = item.goals.goal_7[0];
+
+                        // Title
+                        const page_title = document.createElement('title');
+                        page_title.textContent = goal_7.heading[0].title;
+                        headerElement.appendChild(page_title);
+
+                        // Image
+                        const imageElement = document.createElement('img');
+                        imageElement.setAttribute("id", "goal");
+                        imageElement.src = goal_7.imageURL;
+                        imageElement.alt = goal_7.alt;
+                        topSection.appendChild(imageElement);
+
+                        // Aims
+                        const paraElementTop = document.createElement('p');
+                        paraElementTop.setAttribute("id", "description");
+                        paraElementTop.textContent = goal_7.aims;
+                        topSection.appendChild(paraElementTop);
+
+                        // About
+                        const firstParaElementMiddle = document.createElement('p');
+                        firstParaElementMiddle.setAttribute("id", "about1");
+                        firstParaElementMiddle.textContent = goal_7.about1;
+                        about_goal.appendChild(firstParaElementMiddle);
+                        const secondParaElementMiddle = document.createElement('p');
+                        secondParaElementMiddle.setAttribute("id", "about2");
+                        secondParaElementMiddle.textContent = goal_7.about2;
+                        about_goal.appendChild(secondParaElementMiddle);
+                        const thirdParaElementMiddle = document.createElement('p');
+                        thirdParaElementMiddle.setAttribute("id", "about3");
+                        thirdParaElementMiddle.textContent = goal_7.about3;
+                        about_goal.appendChild(thirdParaElementMiddle);
+
+                        // Targets list
+                        const targetElement = document.createElement('ul');
+                        targetElement.setAttribute("id", "targets");
+                        targetElement.textContent = goal_7.targets;
+                        targetElement.classList.add("services");
+
+                        const firstTarget = document.createElement('li');
+                        firstTarget.setAttribute("id", "goal_lists");
+                        firstTarget.textContent = goal_7.target1;
+                        targetElement.appendChild(firstTarget);
+
+                        const secondTarget = document.createElement('li');
+                        secondTarget.setAttribute("id", "goal_lists");
+                        secondTarget.textContent = goal_7.target2;
+                        targetElement.appendChild(secondTarget);
+
+                        const thirdTarget = document.createElement('li');
+                        thirdTarget.setAttribute("id", "goal_lists");
+                        thirdTarget.textContent = goal_7.target3;
+                        targetElement.appendChild(thirdTarget);
+
+                        const fourthTarget = document.createElement('li');
+                        fourthTarget.setAttribute("id", "goal_lists");
+                        fourthTarget.textContent = goal_7.target4;
+                        targetElement.appendChild(fourthTarget);
+
+                        const fithTarget = document.createElement('li');
+                        fithTarget.setAttribute("id", "goal_lists");
+                        fithTarget.textContent = goal_7.target5;
+                        targetElement.appendChild(fithTarget);
+
+                        bottomSection.appendChild(targetElement);
+
+                        // Things to do list
+                        const helpElement = document.createElement('ul');
+                        helpElement.textContent = goal_7.things;
+                        helpElement.setAttribute("id", "help");
+                        helpElement.classList.add("services");
+
+                        const firstHelp = document.createElement('li');
+                        firstHelp.setAttribute("id", "goal_lists");
+                        firstHelp.textContent = goal_7.thing1;
+                        helpElement.appendChild(firstHelp);
+
+                        const secondHelp = document.createElement('li');
+                        secondHelp.setAttribute("id", "goal_lists");
+                        secondHelp.textContent = goal_7.thing2;
+                        helpElement.appendChild(secondHelp);
+
+                        const thirdHelp = document.createElement('li');
+                        thirdHelp.setAttribute("id", "goal_lists");
+                        thirdHelp.textContent = goal_7.thing3;
+                        helpElement.appendChild(thirdHelp);
+
+                        const fourthHelp = document.createElement('li');
+                        fourthHelp.setAttribute("id", "goal_lists");
+                        fourthHelp.textContent = goal_7.thing4;
+                        helpElement.appendChild(fourthHelp);
+
+                        const fithHelp = document.createElement('li');
+                        fithHelp.setAttribute("id", "goal_lists");
+                        fithHelp.textContent = goal_7.thing5;
+                        helpElement.appendChild(fithHelp);
+
+                        const sixthHelp = document.createElement('li');
+                        sixthHelp.setAttribute("id", "goal_lists");
+                        sixthHelp.textContent = goal_7.thing6;
+                        helpElement.appendChild(sixthHelp);
+
+                        bottomSection.appendChild(helpElement);
+                    }
+
+
+                    //checks for the id goal_13 before loading content in the json file
+                    if (document.querySelector("#goal_13")) {
+                        // Grab the first object inside goal_13
+                        const goal_13 = item.goals.goal_13[0];
+
+                        // Title
+                        const page_title = document.createElement('title');
+                        page_title.textContent = goal_13.heading[0].title;
+                        headerElement.appendChild(page_title);
+
+                        // Image
+                        const imageElement = document.createElement('img');
+                        imageElement.setAttribute("id", "goal");
+                        imageElement.src = goal_13.imageURL;
+                        imageElement.alt = goal_13.alt;
+                        topSection.appendChild(imageElement);
+
+                        // Aims
+                        const paraElementTop = document.createElement('p');
+                        paraElementTop.setAttribute("id", "description");
+                        paraElementTop.textContent = goal_13.aims;
+                        topSection.appendChild(paraElementTop);
+
+                        // About
+                        const firstParaElementMiddle = document.createElement('p');
+                        firstParaElementMiddle.setAttribute("id", "about1");
+                        firstParaElementMiddle.textContent = goal_13.about1;
+                        about_goal.appendChild(firstParaElementMiddle);
+                        const secondParaElementMiddle = document.createElement('p');
+                        secondParaElementMiddle.setAttribute("id", "about2");
+                        secondParaElementMiddle.textContent = goal_13.about2;
+                        about_goal.appendChild(secondParaElementMiddle);
+                        const thirdParaElementMiddle = document.createElement('p');
+                        thirdParaElementMiddle.setAttribute("id", "about3");
+                        thirdParaElementMiddle.textContent = goal_13.about3;
+                        about_goal.appendChild(thirdParaElementMiddle);
+
+                        // Targets list
+                        const targetElement = document.createElement('ul');
+                        targetElement.textContent = goal_13.targets;
+                        targetElement.setAttribute("id", "targets");
+                        targetElement.classList.add("services");
+
+                        const firstTarget = document.createElement('li');
+                        firstTarget.setAttribute("id", "goal_lists");
+                        firstTarget.textContent = goal_13.target1;
+                        targetElement.appendChild(firstTarget);
+
+                        const secondTarget = document.createElement('li');
+                        secondTarget.setAttribute("id", "goal_lists");
+                        secondTarget.textContent = goal_13.target2;
+                        targetElement.appendChild(secondTarget);
+
+                        const thirdTarget = document.createElement('li');
+                        thirdTarget.setAttribute("id", "goal_lists");
+                        thirdTarget.textContent = goal_13.target3;
+                        targetElement.appendChild(thirdTarget);
+
+                        const fourthTarget = document.createElement('li');
+                        fourthTarget.setAttribute("id", "goal_lists");
+                        fourthTarget.textContent = goal_13.target4;
+                        targetElement.appendChild(fourthTarget);
+
+                        const fithTarget = document.createElement('li');
+                        fithTarget.setAttribute("id", "goal_lists");
+                        fithTarget.textContent = goal_13.target5;
+                        targetElement.appendChild(fithTarget);
+
+                        bottomSection.appendChild(targetElement);
+
+                        // Things to do list
+                        const helpElement = document.createElement('ul');
+                        helpElement.textContent = goal_13.things;
+                        helpElement.setAttribute("id", "help");
+                        helpElement.classList.add("services");
+
+                        const firstHelp = document.createElement('li');
+                        firstHelp.setAttribute("id", "goal_lists");
+                        firstHelp.textContent = goal_13.thing1;
+                        helpElement.appendChild(firstHelp);
+
+                        const secondHelp = document.createElement('li');
+                        secondHelp.setAttribute("id", "goal_lists");
+                        secondHelp.textContent = goal_13.thing2;
+                        helpElement.appendChild(secondHelp);
+
+                        const thirdHelp = document.createElement('li');
+                        thirdHelp.setAttribute("id", "goal_lists");
+                        thirdHelp.textContent = goal_13.thing3;
+                        helpElement.appendChild(thirdHelp);
+
+                        const fourthHelp = document.createElement('li');
+                        fourthHelp.setAttribute("id", "goal_lists");
+                        fourthHelp.textContent = goal_13.thing4;
+                        helpElement.appendChild(fourthHelp);
+
+                        const fithHelp = document.createElement('li');
+                        fithHelp.setAttribute("id", "goal_lists");
+                        fithHelp.textContent = goal_13.thing5;
+                        helpElement.appendChild(fithHelp);
+                        
+                        const sixthHelp = document.createElement('li');
+                        sixthHelp.setAttribute("id", "goal_lists");
+                        sixthHelp.textContent = goal_13.thing6;
+                        helpElement.appendChild(sixthHelp);
+                        
+                        const seventhHelp = document.createElement('li');
+                        seventhHelp.setAttribute("id", "goal_lists");
+                        seventhHelp.textContent = goal_13.thing7;
+                        helpElement.appendChild(seventhHelp);
+
+                        const eighthHelp = document.createElement('li');
+                        eighthHelp.setAttribute("id", "goal_lists");
+                        eighthHelp.textContent = goal_13.thing8;
+                        helpElement.appendChild(eighthHelp);
+
+                        const ninthHelp = document.createElement('li');
+                        ninthHelp.setAttribute("id", "goal_lists");
+                        ninthHelp.textContent = goal_13.thing9;
+                        helpElement.appendChild(ninthHelp);
+
+                        bottomSection.appendChild(helpElement);
+                    }
+
+                    //checks for the id goal_15 before loading content in the json file
+                    if (document.querySelector("#goal_15")) {
+                        // Grab the first object inside goal_15
+                        const goal_15 = item.goals.goal_15[0];
+
+                        // Title
+                        const page_title = document.createElement('title');
+                        page_title.textContent = goal_15.heading[0].title;
+                        headerElement.appendChild(page_title);
+
+                        // Image
+                        const imageElement = document.createElement('img');
+                        imageElement.setAttribute("id", "goal");
+                        imageElement.src = goal_15.imageURL;
+                        imageElement.alt = goal_15.alt;
+                        topSection.appendChild(imageElement);
+
+                        // Aims
+                        const paraElementTop = document.createElement('p');
+                        paraElementTop.setAttribute("id", "description");
+                        paraElementTop.textContent = goal_15.aims;
+                        topSection.appendChild(paraElementTop);
+
+                        // About
+                        const firstParaElementMiddle = document.createElement('p');
+                        firstParaElementMiddle.setAttribute("id", "about1");
+                        firstParaElementMiddle.textContent = goal_15.about1;
+                        about_goal.appendChild(firstParaElementMiddle);
+                        const secondParaElementMiddle = document.createElement('p');
+                        secondParaElementMiddle.setAttribute("id", "about2");
+                        secondParaElementMiddle.textContent = goal_15.about2;
+                        about_goal.appendChild(secondParaElementMiddle);
+                        const thirdParaElementMiddle = document.createElement('p');
+                        thirdParaElementMiddle.setAttribute("id", "about3");
+                        thirdParaElementMiddle.textContent = goal_15.about3;
+                        about_goal.appendChild(thirdParaElementMiddle);
+
+                        // Targets list
+                        const targetElement = document.createElement('ul');
+                        targetElement.textContent = goal_15.targets;
+                        targetElement.setAttribute("id", "targets");
+                        targetElement.classList.add("services");
+
+                        const firstTarget = document.createElement('li');
+                        firstTarget.setAttribute("id", "goal_lists");
+                        firstTarget.textContent = goal_15.target1;
+                        targetElement.appendChild(firstTarget);
+
+                        const secondTarget = document.createElement('li');
+                        secondTarget.setAttribute("id", "goal_lists");
+                        secondTarget.textContent = goal_15.target2;
+                        targetElement.appendChild(secondTarget);
+
+                        const thirdTarget = document.createElement('li');
+                        thirdTarget.setAttribute("id", "goal_lists");
+                        thirdTarget.textContent = goal_15.target3;
+                        targetElement.appendChild(thirdTarget);
+
+                        const fourthTarget = document.createElement('li');
+                        fourthTarget.setAttribute("id", "goal_lists");
+                        fourthTarget.textContent = goal_15.target4;
+                        targetElement.appendChild(fourthTarget);
+
+                        const fithTarget = document.createElement('li');
+                        fithTarget.setAttribute("id", "goal_lists");
+                        fithTarget.textContent = goal_15.target5;
+                        targetElement.appendChild(fithTarget);
+
+                        bottomSection.appendChild(targetElement);
+
+                        // Things to do list
+                        const helpElement = document.createElement('ul');
+                        helpElement.textContent = goal_15.things;
+                        helpElement.setAttribute("id", "help");
+                        helpElement.classList.add("services");
+
+                        const firstHelp = document.createElement('li');
+                        firstHelp.setAttribute("id", "goal_lists");
+                        firstHelp.textContent = goal_15.thing1;
+                        helpElement.appendChild(firstHelp);
+
+                        const secondHelp = document.createElement('li');
+                        secondHelp.setAttribute("id", "goal_lists");
+                        secondHelp.textContent = goal_15.thing2;
+                        helpElement.appendChild(secondHelp);
+
+                        const thirdHelp = document.createElement('li');
+                        thirdHelp.setAttribute("id", "goal_lists");
+                        thirdHelp.textContent = goal_15.thing3;
+                        helpElement.appendChild(thirdHelp);
+
+                        const fourthHelp = document.createElement('li');
+                        fourthHelp.setAttribute("id", "goal_lists");
+                        fourthHelp.textContent = goal_15.thing4;
+                        helpElement.appendChild(fourthHelp);
+
+                        bottomSection.appendChild(helpElement);
+                    }
+                
             };
 
 
