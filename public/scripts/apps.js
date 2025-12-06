@@ -199,9 +199,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 //creates page title:
                 const h2About = document.querySelector('#about-page-title');
                 h2About.textContent = item.about.small_heading;
+     
 
                 //creates the page paragraph:
                 const h3About = document.querySelector('#about-para')
+
 
                 const h3AboutPara1 = document.createElement('p');
                 h3AboutPara1.textContent = item.about.para1;

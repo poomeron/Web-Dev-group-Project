@@ -1,7 +1,7 @@
 [{
     "heading":{
         "title":"Group Project: Form Page",
-        "header":"Join Our Newsletter!",
+        "header":"UN Sustainability Goals",
         "search_text": "Search....",
         "button_text": "Search"
     },
@@ -90,11 +90,11 @@
             },
             {
                 "name": "Cameron Witherick",
-                "role": "Form Page Developer",
+                "role": "Form Page + About page Developer",
                 "bio": "Created and styled the newsletter signup form.",
                 "responsibilities": [
-                    "Developing the form.html page",
-                    "Building form structure using HTML",
+                    "Developing the form.html page and about.html page",
+                    "Building form + about structure using HTML",
                     "Ensuring labels, inputs and formatting followed standards"
                 ],
                 "contributions": [

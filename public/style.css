@@ -215,6 +215,7 @@ footer {
 
 
 @media only screen and (max-width: 1000px) and (min-width: 809px){
+    h1{ font-size: 44px}
 
     .nav-bar{ display: grid; grid-auto-flow: column; gap: 6px; }
 

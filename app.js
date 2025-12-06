@@ -38,7 +38,7 @@ app.post("/newsletter",  async (req, res)=>{
   
     //to send an email :)
 
-    let bodytext = `hi ${first_name} ${last_name}, \n\n` + 
+    let bodytext = `Hi ${first_name} ${last_name}, \n\n` + 
         `Thank you for signing up to our weekly Newsletter!\n`+
         `You're now subscribed with the email address: ${email}.\n\n`;
     if (message && message.trim()!== ""){
@@ -47,7 +47,7 @@ app.post("/newsletter",  async (req, res)=>{
         `"${message.trim()}"\n`+
         `and we will start reflecting this in future newsletter content.\n\n`;
     }
-    bodytext+= "Best Wishes, \n The ________ team";
+    bodytext+= "Best Wishes, \n The UN Sustainable Goals Team";
     
     try{
         console.log("about to send mail with: ", process.env.EMAIL_USER);
