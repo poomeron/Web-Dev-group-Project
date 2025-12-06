@@ -25,6 +25,9 @@
         "l_newsletter": "form.html",
         "l_team": "team.html"
     },
+    "footer":{
+        "footer_text": "Copyright © 2025 UN Sustainability Goals"
+    },
     "form":{
         "small_heading":"Sign up now to join our weekly newsletter! ",
         "paragraph":"Join our weekly newsletter to explore how our Goals shape a fairer, greener and brighter future for everyone. Each issue breaks down complex topics like clean energy access, climate action, and protecting life on land into clear, practical insights you can use in your everyday life. You'll discover inpsiring projects, simple ways to take action, and updates that keep you informed, motivated and connected to a communtiy that cares about the planet.",
