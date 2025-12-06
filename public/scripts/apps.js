@@ -177,6 +177,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
                 searchContainer.classList.toggle('open');
             })
 
+            //adds the footer content at the bottom of the page 
+            const footer = document.querySelector('footer');
+            const foot = document.createElement('p');
+            foot.textContent = item.footer.footer_text;
+            footer.append(foot);
+
            //checks if the home pagen link is active
            //#####JAVA SCRIPT FOR INDEX PAGE HERE:!!!!!!!!!!
             if (window.location.pathname==="/"+ item.links.l_home){
