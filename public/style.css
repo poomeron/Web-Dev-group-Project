@@ -157,6 +157,16 @@ textarea{display: block; width: 95%; padding: 10px; margin: 10px 5px; border: 1p
 
 #about-img{max-width: 230px; padding: 20px 0px}
 
+/*css for the footer  */
+footer {
+    background-color: #a59c96;
+    font-size: 0.9em;
+    text-align: center;
+    color: #000000;
+    padding: 16px;
+    margin: 32px;
+}v
+
 @media only screen and (max-width: 808px){
     #form_title{display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; position: relative}
 
