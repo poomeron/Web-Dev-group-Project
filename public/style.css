@@ -165,7 +165,7 @@ footer {
     color: #000000;
     padding: 16px;
     margin: 32px;
-}v
+}
 
 @media only screen and (max-width: 808px){
     #form_title{display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; position: relative}
