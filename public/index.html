@@ -1,79 +1,91 @@
+<!DOCTYPE html>
 <html>
-    
-    <head>
 
-        <link rel="stylesheet"
-                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="scripts/apps.js" defer></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="keywords" content = "index page, HTML">
-         <meta name="description" content = "index page for web dev page">
-         <meta name= "author" content = "Riken Gurung">
-         <meta charset="utf-8">
-    </head>
-    <div id="Wrapper">
-        <header>
-            <title>Norwich Yoga studio</title> 
-            <h1>
-                 Norwich Yoga Studio
-            </h1>
-            <a id="Burger"><i class="fa fa-bars"></i></a>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-        </header>
-        <nav>
-            <ul class ="Hidden">
-                <li class="active"> <a href="index.html" class = "Navigation">Home</a></li>
-                <li> <a href="classes.html"class = "Navigation">Classes</a></li>
-                <li><a href="schedule.html" class ="Navigation">Schedule</a></li>
-                <li><a href="form.html" class="Navigation">Contact</a></li>
+   
+    <script src="scripts/apps.js" defer></script>
 
-            </ul>
-        </nav>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="UN Sustainability Goals, Global Goals 7 13 15, climate, energy, life on land">
+    <meta name="description" content="Homepage for our UN Sustainability Goals project website.">
+    <meta name="author" content="Riken Gurung">
+    <meta charset="utf-8">
+    <title>UN Sustainability Goals - Home</title>
+</head>
+
+<body>
+   
+    <div>
+        <header id="form_title"></header>
     </div>
-    <main>
-        <p class="mypara"></p>
-        <article>
-            <h2>
-                Find Your Inner Strength 
-        </h2>
-        </article>
-        <ul id="Benefits">Inner strength is the ability to assess a situation, observe your own thoughts and
-            emotions, and respond wisely and compassionately” – yourtimetogrow.com.
-            
-            <li> Improves strength, balance and flexibility.</li>
-            <li>Helps with stress relief.</li>
-            <li>Helps improve sleep.</li>
-            <li>Improves mental health and general wellbeing.</li>
-        </ul>
-        </h3>
-        <section class ="clearfix">
-            <article class ="services">
-                <h3>Group Lessons</h3>
-                 <p>We offer two-week courses for individuals or small groups in a range of areas
-                    including stress reduction, improving your posture and so on </p>
-                <figure>
-                    <img src="group_yoga.png" alt = "Group Yoga" width="400" height="150">
-                </figure>
-            </article>
-            <article class ="services">
-                <h3> One-to-one Lessons</h3>
-                <p>We offer three-week one-to-one Lessons where you get complete attention, support,
-                    and adjustment. This is especially useful if you desire to deepen your practice, as the
-                    classes will be tailored specifically to your condition and needs</p>
-                <figure>
-                    <img src="yoga0.jpeg" alt = "One on One Lessons" width= "400" height="150">
-                </figure>
-            </article>
-            <p><button type="button" class ="btn">Join us!!</button></p>
-            <p><a href="mailto:nam25ryu@uea.ac.uk">If you have any questions, please email us.</a></p>
-        
 
+    <nav class="main-nav">
+        <ul class="nav-bar"></ul>
+    </nav>
+
+    
+    <main class="mainForm">
+        <section>
+            <h2>Welcome to our UN Sustainability Goals Site</h2>
+            <p id="page-para">
+                This website was created as a group project to explore three of the United Nations Sustainable
+                Development Goals: Goal 7 (Affordable and Clean Energy), Goal 13 (Climate Action), and
+                Goal 15 (Life on Land). Our aim is to explain what these goals are, why they matter, and
+                how everyday actions can contribute to a fairer, greener and more sustainable future.
+            </p>
         </section>
 
+        <section class="sectionForm">
+            <article class="services">
+                <h3>What you can find on this site</h3>
+                <ul id="goal_lists">
+                    <li><strong>Goal pages:</strong> Dedicated pages for Goals 7, 13 and 15 that explain
+                        each goal, key targets, and practical “things you can do”.</li>
+                    <li><strong>About page:</strong> A clear overview of how these three goals connect and
+                        why they're important globally and locally.</li>
+                    <li><strong>Newsletter:</strong> A newsletter sign-up form where you can subscribe to
+                        receive regular updates and ideas for climate-friendly actions.</li>
+                    <li><strong>Team page:</strong> An introduction to our project team and how we divided
+                        the work across the different pages.</li>
+                </ul>
+            </article>
+
+            <article class="services">
+                <h3>Our project goals</h3>
+                <ul id="goal_lists">
+                    <li><strong>Inform:</strong> Present the three UN Goals in simple, accessible language so
+                        that anyone can understand the core ideas.</li>
+                    <li><strong>Inspire action:</strong> Highlight realistic, everyday steps that students
+                        and community members can take to support these goals.</li>
+                    <li><strong>Practice web development:</strong> Use HTML, CSS and JavaScript to build a
+                        consistent multi-page website that is responsive and easy to navigate.</li>
+                    <li><strong>Work as a team:</strong> Coordinate content, layout and styling so that all
+                        pages feel like part of one coherent site.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="sectionForm">
+            <article class="services">
+                <h3>How to explore the site</h3>
+                <p>
+                    Use the navigation bar at the top of the page. On smaller screens, the hamburger menu
+                    will open and close the navigation so you can quickly move between the Home page, the
+                    Goals, the About page, the Newsletter form and the Team page. All pages share the same
+                    layout and colour scheme so it feels like one unified experience.
+                </p>
+            </article>
+        </section>
     </main>
-    <footer><h5>Copyright © 2025 Norwich Yoga Studio</h5></footer>
 
 
+    <footer></footer>
+</body>
 
- 
 </html>
