@@ -249,23 +249,20 @@ footer {
     margin: 0 auto 40px auto;
 }
 
-/* grid layout */
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 28px;
 }
 
-/* team card */
 .team-card {
     background: var(--card);
-    border: 2px solid var(--climate-green); /* clearer border */
+    border: 2px solid var(--climate-green); 
     border-radius: 18px;
     padding: 24px;
     text-align: center;
 }
 
-/* text styles */
 .team-card h3 {
     margin: 5px 0;
     font-size: 22px;
