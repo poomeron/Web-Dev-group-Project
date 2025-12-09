@@ -185,9 +185,25 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
            //checks if the home pagen link is active
            //#####JAVA SCRIPT FOR INDEX PAGE HERE:!!!!!!!!!!
-            if (window.location.pathname==="/"+ item.links.l_home){
-                home_a.setAttribute('id', 'active');
-            };
+            if (
+                window.location.pathname === "/" ||
+                window.location.pathname === "/" + item.links.l_home
+            ) {
+                home_a.setAttribute("id", "active");
+
+                const homeSection = document.getElementById("home-content");
+
+                if (homeSection && item.home) {
+                    homeSection.innerHTML = `
+                        <article class="services">
+                            <h3>${item.home.heading}</h3>
+                            <p>${item.home.para1}</p>
+                            <p>${item.home.para2}</p>
+                            <p>${item.home.para3}</p>
+                        </article>
+                    `;
+                }
+            }
 
             //checks if the about page link is active
             //######JAVA SCRIPT FOR ABOUT PAGE HERE !!!!!!:

@@ -221,5 +221,13 @@
         "alt_7": "Goal 7",
         "alt_13": "Goal 13",
         "alt_15": "Goal 15"
+    },
+    
+    "home": {
+    "heading": "Welcome to the UN Sustainability Goals Website",
+    "para1": "This website is dedicated to raising awareness of the United Nations Sustainability Goals, with a particular focus on Goals 7, 13 and 15.",
+    "para2": "Throughout the site, you can explore detailed information about each goal, why it matters, and what actions individuals and communities can take to support a more sustainable future.",
+    "para3": "Use the navigation menu at the top of the page to move between sections. You can learn about each sustainability goal, meet the project team, and sign up for our newsletter to stay informed and involved."
     }
+
 }]
